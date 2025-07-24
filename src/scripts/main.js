@@ -16,7 +16,7 @@ for (const i of numbers) {
 
 const avgN = Math.round(
   propArr.reduce((sum, curr) => sum + curr, 0) / propArr.length,
-);
+) || 0;
 const totalN = propArr.reduce((sum, curr) => sum + curr, 0);
 
 function format(a) {
