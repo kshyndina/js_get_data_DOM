@@ -14,9 +14,9 @@ for (const i of numbers) {
   }
 }
 
-const avgN = Math.round(
-  propArr.reduce((sum, curr) => sum + curr, 0) / propArr.length,
-) || 0;
+const avgN =
+  Math.round(propArr.reduce((sum, curr) => sum + curr, 0) / propArr.length) ||
+  0;
 const totalN = propArr.reduce((sum, curr) => sum + curr, 0);
 
 function format(a) {
@@ -29,5 +29,5 @@ function format(a) {
   return text.join('');
 }
 
-average.innerHTML = format(avgN);
+average.innerHTML = format(avgN) === Infinity || isNaN(avgN) ? 0 : format(avgN);
 total.innerHTML = format(totalN);
